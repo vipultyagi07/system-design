@@ -1,0 +1,16 @@
+Question: Suppose we have a class name "Book" it have it's needed attributes, now we have a
+            class name "Invoice" which basically perform 3 major function
+
+                    -> calculateTotal
+                    -> printInvoice
+                    -> saveTheDataToDB
+            Now we want to change  1.  "calculateTotal" because of some new GST rule
+                                   2.  "printInvoice" with some extra data set
+                                   3.  "saveTheDataToDB" to saveIntoS3
+            SO WE CAN SAY WE WANT TO CHANGE ALL THE 3 METHODS PRESENT in this Invoice class, Suggest a correct
+             way of implementing this?
+
+ Answer: We will gonna use SOLID's principle's S(Single Responsibility Principle) -> it says
+                  "A CLASS SHOULD HAVE ONLY 1 REASON TO CHANGE"
+
+                  see the solution in 'B_rightApproach' package
