@@ -1,0 +1,6 @@
+->  In this  approach we create a "Bird" class which have a "fly()" method now this "Penguin" class will extend the "Bird"
+    class but does have  a"fly()" method
+
+    To correct this and adhere to the Liskov Substitution Principle,
+    we should either remove the fly method from the Bird class or override
+    it in the Penguin class with an appropriate implementation:
