@@ -1,0 +1,3 @@
+    Now, the Laptop class depends on abstractions (Keyboard and Mouse interfaces),
+    and you can easily swap out different implementations of keyboards and mice without
+    modifying the Laptop class. This adheres to the Dependency Inversion Principle.

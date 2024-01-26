@@ -1,0 +1,6 @@
+We will create a class "Laptop" then we will directly call the keyboard class and mouse class and set it to the laptop using
+constructor injection.
+
+But this approach is wrong, what if we want to change the type of keyboard and mouse.
+
+        -> to do so we have to make change in this class itself, which is not a very neat approach
