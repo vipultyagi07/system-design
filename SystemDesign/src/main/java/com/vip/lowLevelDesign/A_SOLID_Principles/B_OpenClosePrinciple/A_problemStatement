@@ -1,0 +1,15 @@
+Question: Suppose we have a class name "Book" it have it's needed attributes, now we have a
+            class name "Invoice","InvoicePrint" and "InvoiceSave" which basically perform only 1 major function
+
+              Invoice           -> calculateTotal
+              InvoicePrint      -> printInvoice
+              InvoiceSave       -> saveTheDataToDB
+
+            Now we want to "add one more method" to 'InvoiceSave' -> saveTheDataToFile *
+            SO WE CAN SAY WE WANT TO MODIFY 'InvoiceSave'  CLASS, Suggest a correct
+             way of implementing this?
+
+ Answer: We will gonna use SOLID's principle's O(Open/Closed principle) -> it says
+                  "OPEN FOR EXTENSION BUT CLOSE FOR MODIFICATION"
+
+                  see the solution in 'B_rightApproach' package

@@ -1,0 +1,4 @@
+->  In this approach we are not even modifying our "InvoiceSave" class and its method, we just created a new class and
+    write the new needed method and then EXTEND that class to the "InvoiceSave"
+
+->  So, now InvoiceSave have both the two needed method "save to db" and "save to file"

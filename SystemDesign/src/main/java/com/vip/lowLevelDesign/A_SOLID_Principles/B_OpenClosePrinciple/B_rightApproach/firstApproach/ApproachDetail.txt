@@ -1,0 +1,2 @@
+->  In this approach we are creating an interface of "InvoiceSave" class in which we have a common method, now we can implement
+    this method in many classes and according to our use case
