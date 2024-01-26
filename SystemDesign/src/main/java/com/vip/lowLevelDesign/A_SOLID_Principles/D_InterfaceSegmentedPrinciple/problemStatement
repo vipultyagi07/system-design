@@ -1,0 +1,12 @@
+Suppose we have a restaurant, we want to perform some operation on the employee of the restaurant, so we will make an interface
+which have
+                    -> washDishes()
+                    -> serveCustomer()
+                    -> cookFood()
+
+how you will gonna implement the class for employees?
+
+
+
+ANSWER : Use Interface Segmented Principle
+

@@ -1,0 +1,10 @@
+Suppose we have a restaurant, we want to perform some operation on the employee of the restaurant, so we won't make an interface
+which have
+                    -> takeOrder()
+                    -> serveCustomer()        we shouldn't use generic interface instead we should use employee generic interface
+
+
+                    "So that there won't be any unnecessary implementation of interface method"
+
+
+

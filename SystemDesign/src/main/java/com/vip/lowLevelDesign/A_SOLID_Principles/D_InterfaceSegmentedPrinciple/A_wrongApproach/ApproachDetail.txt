@@ -1,0 +1,7 @@
+Suppose we have a restaurant, we want to perform some operation on the employee of the restaurant, so we will make an interface
+which have
+                    -> washDishes()
+                    -> serveCustomer()
+                    -> cookFood()
+
+first we will create an implementation class for "Waiter"
