@@ -11,19 +11,15 @@ public class Product implements Subject{
     private String email;
     private boolean inStock;
 
-
     public Product() {
         observers = new ArrayList();
 
     }
-
-
     @Override
     public void registerUser(Observer observer) {
         observers.add(observer);
 
     }
-
     @Override
     public void removeUser(Observer observer) {
         int i = observers.indexOf(observer);
@@ -31,7 +27,6 @@ public class Product implements Subject{
             observers.remove(i);
         }
     }
-
     @Override
     public void notifyUser() {
         for (int i = 0; i < observers.size(); i++) {
@@ -39,7 +34,6 @@ public class Product implements Subject{
             observer.update();
         }
     }
-
     public void setInStock(boolean inStock) {
         this.inStock = inStock;
         if (inStock) {
