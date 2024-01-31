@@ -8,17 +8,20 @@
         <outputRelativeToContentRoot value="true" />
         <module name="SystemDesign" />
         <module name="Z_FlipkartNotifyMe" />
+        <module name="Z_PizzaSelectionSystemProject" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="SystemDesign" target="17" />
       <module name="Z_FlipkartNotifyMe" target="17" />
+      <module name="Z_PizzaSelectionSystemProject" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="SystemDesign" options="-parameters" />
       <module name="Z_FlipkartNotifyMe" options="-parameters" />
+      <module name="Z_PizzaSelectionSystemProject" options="-parameters" />
     </option>
   </component>
 </project>
