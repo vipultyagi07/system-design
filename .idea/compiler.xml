@@ -2,16 +2,19 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="SystemDesign" />
         <module name="Z_FlipkartNotifyMe" />
+        <module name="ParkingLot" />
         <module name="Z_PizzaSelectionSystemProject" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="ParkingLot" target="17" />
       <module name="SystemDesign" target="17" />
       <module name="Z_FlipkartNotifyMe" target="17" />
       <module name="Z_PizzaSelectionSystemProject" target="17" />
@@ -19,6 +22,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="ParkingLot" options="-parameters" />
       <module name="SystemDesign" options="-parameters" />
       <module name="Z_FlipkartNotifyMe" options="-parameters" />
       <module name="Z_PizzaSelectionSystemProject" options="-parameters" />
