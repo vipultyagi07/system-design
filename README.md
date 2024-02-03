@@ -1,4 +1,4 @@
-## system-design
+# system-design
 Explore practical examples of System Design implemented in Java. From design patterns to scalability, this repository provides concise, hands-on illustrations for building robust systems in Java. Dive in and elevate your understanding of system architecture.
 
 
@@ -29,7 +29,7 @@ A. To add a project from a local computer to git-hub
         
         "git remote add origin https://github.com/your-username/your-repo.git"
         
-          # # git frequently used commands 
+  ##  git frequently used commands 
         
     1st - checkout command 
     "git checkout 'branch name'"
