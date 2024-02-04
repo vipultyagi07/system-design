@@ -3,6 +3,7 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 @Entity
 @Data
@@ -15,8 +16,15 @@ public class ParkingSpot {
     private String type; // "2wheeler" or "4wheeler"
     private BigDecimal price;
 
-    @OneToOne(mappedBy = "parkingSpot")
+    @OneToOne
+    @JoinColumn(name = "vehicle_id")
     private Vehicle vehicle;
+
+    /**
+     * This means that a single parking spot can be associated with multiple parking tickets.
+     */
+    @OneToMany(mappedBy = "parkingSpot")
+    private List<ParkingTicket> parkingTickets;
 
     // getters and setters
 }

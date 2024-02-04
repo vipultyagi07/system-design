@@ -1,9 +1,7 @@
 package com.vip.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import com.vip.common.enums.VehicleType;
+import jakarta.persistence.*;
 import lombok.Data;
 
 @Entity
@@ -14,6 +12,8 @@ public class Vehicle {
     private Long id;
 
     private String vehicleNo;
-    private String vehicleType;
+
+    @Enumerated(EnumType.STRING)
+    private VehicleType vehicleType;
 
 }
