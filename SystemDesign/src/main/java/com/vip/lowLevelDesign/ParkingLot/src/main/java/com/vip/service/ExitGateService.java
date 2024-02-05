@@ -2,6 +2,9 @@ package com.vip.service;
 
 import com.vip.common.dto.ExitTicketDto;
 import com.vip.entity.ParkingTicket;
+import com.vip.exception.ErrorCode;
+import com.vip.exception.ParkingLotException;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,6 +14,7 @@ import java.time.LocalDateTime;
 import java.util.Objects;
 
 @Service
+@Slf4j
 public class ExitGateService {
 
 
@@ -18,10 +22,10 @@ public class ExitGateService {
     private  ParkingTicketService parkingTicketService;
 
     public ExitTicketDto generatePayment(String vehicleNumber) {
-
+        try {
         ParkingTicket parkingTicket=parkingTicketService.findParkingTicketOfVehicle(vehicleNumber);
         if(Objects.isNull(parkingTicket)){
-            return null;
+            throw new ParkingLotException("Vehicle "+vehicleNumber+" already left the parking lot ",ErrorCode.VEHICLE_ALREADY_LEFT_THE_PARKING_LOT);
         }
 
         LocalDateTime entryTime = parkingTicket.getEntryTime();
@@ -36,6 +40,14 @@ public class ExitGateService {
 
 
         return exitTicketDto;
+        } catch (ParkingLotException ex) {
+            // Handle the custom exception, log the error, or perform other actions
+            log.error("Parking Lot Exception: " + ex.getErrorCode() + " - " + ex.getMessage(), ex);
+            throw ex;
+        } catch (Exception ex) {
+            log.error("Unexpected error: " + ex.getMessage(), ex);
+            throw new ParkingLotException("Internal Server Error", ErrorCode.INTERNAL_SERVER_ERROR);
+        }
 
     }
 

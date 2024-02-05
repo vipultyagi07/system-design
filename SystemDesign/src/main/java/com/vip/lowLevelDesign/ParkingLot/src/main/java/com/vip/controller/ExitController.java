@@ -24,7 +24,7 @@ public class ExitController {
     public ResponseEntity<Object> generatePayment(@RequestParam String vehicleNumber ){
 
             ExitTicketDto exitTicketDto = exitGateService.generatePayment(vehicleNumber);
-            return Objects.isNull(exitTicketDto) ? new ResponseEntity<>(HttpStatus.NOT_FOUND) : new ResponseEntity<>(exitTicketDto, HttpStatus.OK);
+            return new ResponseEntity<>(exitTicketDto, HttpStatus.OK);
 
     }
 
